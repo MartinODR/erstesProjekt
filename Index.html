@@ -4,16 +4,97 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title> Mi Primera Web<!-- hier titel eingeben --></title>
+    <!--lo siguiente es css aplicado a las tablas -->
+    <style> 
+      table, th, td {                        
+        border: 1px solid black;
+      }
+    </style>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <table style="width: 500px;">
+      <thead>
+        <tr>
+          <th>Preis</th>  
+          <th>Produkt</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Hallo Bits</td>
+          <td>Gratis</td>
+        </tr>
+        <tr>
+          <td>Tschüss gutes Bits</td>
+          <td>19,95$ </td>
+        </tr>
+        <tr>
+          <td>Auf Wiedersehen mein gutes Bits</td>
+          <td>29,95$</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <td></td>
+        <td>Total: 49,90$</td>
+      </tfoot>
+    </table>
+       <!--"ul"es lista no ordenada, "li" list item, "ol" ordered list-->
+       <ul>
+          <li>Element 1</li>
+          <li>Element 2</li>
+          <li>Element 3</li>
+          <li>Element 4</li>
+
+       </ul>
+       <ol>
+        <li value="50">Element 1</li>
+        <li>Element 2</li>
+        <li>Element 3</li>
+        <li>Element 4</li>
+        <li>
+          <ol>
+            <li style="list-style-type: lower-alpha;">Unterelement 1</li> <!--(Strg o Ctrl)+ spc ofrece la lista de valores-->
+            <li style="list-style-type: lower-alpha;">Unterelement 1</li>
+            <li style="list-style-type: lower-alpha;">Unterelement 1</li> 
+          </ol>
+        </li>
+
+     </ol>
+
+
     <!--(Form)formularios, (label) etiqueta cual es el dato que queremos, (for) enfoca el campo al cual hacemos referencia
-    (id) conecta el click con for, (name) indica el objeto llave key el cual sera interpretado por el servidor,
-  (placeholder) indica texto de referencia en el campo a escribir -->
-    <form>
-      <label for="Name">Name</label>
-      <input id="Name" name="Name" placeholder="Name schreiben"/>
-    </form>
+    (id) conecta el click con for, (name) indica el objeto llave key el cual sera interpretado por el servidor muy importante,
+    (placeholder) indica texto de referencia en el campo a escribir -->
+    <!--Propiedad de imput (type)se le pueden agregar diferentes valores para que se comporte diferente,
+     "submit":el campo se convertira en un boton,
+      "text":se transformara nuevamente en texto(valor por defecto),
+      "e-mail"donde se espera que el usuario ingrese un valor de e-mail,
+     "pasword":oculta el valor que se introduce,
+     "radio": se transforma en un boton de radio para marcar,
+     "checkbox" se transforma en una casilla de marcado,"file":para seleccionar un archivo -->
+     <!--para incluir un valor por defecto se introduce la etiqueta (value a imput)-->
+     <form action="/formulario" method="Get"> <!--(GET):enviara los valores que se encuentran dentro de los campos a travez de la url 255 caracteres,
+    (POST) envia los datos pero no de forma segura hacia la url,se ven los datos en el codigo fuente en network-->
+    <!--un valor standard se introduce con la etiqueta (standard) en el imput -->
+      <label for="Vormane">Vorname</label>
+      <input type="text" id="Vorname" name="Vorname" placeholder="Vorname schreiben..."/>
+      <br>
+      <label for="Nachname">Nachname</label>
+      <input type="text" id="Nachname" name="Nachname" placeholder="Nachname schreiben..."/>
+      <br>
+      <label for="Kommentare">Kommentare</label>
+      <br>
+      <textarea cols="50" rows="10" id="kommentare" placeholder="Geben Sie hier Ihren Kommentar ein" name="Kommentare">Dies ist ein Standardwert</textarea>
+      <br>
+      <input type="submit" /> 
+      <br>
+      <button type="button">für javascript button typ</button>
+      <br>
+      <button type="reset">Reset Formular button typ</button>
+      <br>
+      <button type="submit">Submit button typ</button>
+     </form>
       <!--estos son headings-->
         <h1>Erste Heading</h1>
         <h2>Zweite heading</h2>
@@ -29,7 +110,7 @@
         <!--este texto es un comentario y no va 
         a aparecer en el explorador-->
         <p>Dieser Text ist <span style="color:blue">viel länger</span> 
-          und soll das<br><br> span! Label zeigen</p>
+          und soll das<br><br>Label zeigen</p>
     <!-- hier den body definieren -->
     <a href="https://www.google.com"> Zu Google gehen</a>
     <br><br>
@@ -38,7 +119,7 @@
     <img src="img/Coffee.png" width="400" height="295"/>
     <!-- si solo se especifica una dimension width 
     o height la imagen se redimensiona automaticamente 
-  en proporcion-->
+   en proporcion-->
     <script src="js/script.js"></script>
   </body> 
 </html>
