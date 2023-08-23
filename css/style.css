@@ -7,5 +7,15 @@ p.Text {
 }
 
 p.Besonderes {
-    color: mediumseagreen;
+    color: rgb(25, 76, 48);
 }
+div p {
+    color:rgb(1, 175, 45)
+}
+/*Dies ist ein Kommentar in CSS*/
+*{  
+    color:brown
+}
+/*este ultimo selector universal(*) selecciona 
+todos los elementos cuyas propiedades no hayan 
+sido definidas*/
